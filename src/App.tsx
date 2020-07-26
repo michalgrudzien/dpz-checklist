@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { ThemeProvider } from "@material-ui/styles";
@@ -12,6 +12,12 @@ import Hero from "components/Hero";
 import Checklist from "components/Checklist";
 
 import checklistData from "items.json";
+import {
+  checkListActive,
+  initStorage,
+  getStorageState,
+  useChecklist,
+} from "components/localStorage";
 
 const Wrapper = styled.div`
   padding-bottom: 2em;
@@ -19,15 +25,31 @@ const Wrapper = styled.div`
 
 //TODO: handle trip type
 
+const TRIP_ID = process.env.REACT_APP_TRIP_ID || "0";
+
 const App = () => {
+  const { items, updateItem, clearItems } = useChecklist(TRIP_ID);
+
+  const itemsCount = checklistData.INLAND.items.length;
+  const checkedItemsCount = Object.values(items).filter((value) => !!value)
+    .length;
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Wrapper>
         <GradientBackground />
         <Container>
-          <Hero />
-          <Checklist data={checklistData.INLAND} />
+          <Hero
+            itemsCount={itemsCount}
+            checkedItemsCount={checkedItemsCount}
+            clearItems={clearItems}
+          />
+          <Checklist
+            data={checklistData.INLAND}
+            checkedItems={items}
+            updateItem={updateItem}
+          />
         </Container>
       </Wrapper>
       <Footer />

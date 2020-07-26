@@ -5,13 +5,7 @@ import {
   FormControlLabel,
   Checkbox,
 } from "@material-ui/core";
-
-type ChecklistItemProps = {
-  label: string;
-  value: boolean;
-  id: string;
-  onChange: Function;
-};
+import { ChecklistItemProps } from "./types";
 
 const ChecklistItem: FunctionComponent<ChecklistItemProps> = ({
   label,
@@ -25,7 +19,7 @@ const ChecklistItem: FunctionComponent<ChecklistItemProps> = ({
         control={
           <Checkbox
             onChange={(event) => {
-              onChange(event.target.checked);
+              onChange(id, event.target.checked);
               event.currentTarget.blur();
             }}
             checked={value}

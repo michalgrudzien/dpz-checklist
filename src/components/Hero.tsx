@@ -1,10 +1,18 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 
-import { Typography, Grid, CardContent } from "@material-ui/core";
+import {
+  Typography,
+  Grid,
+  CardContent,
+  Fade,
+  Button,
+  Box,
+} from "@material-ui/core";
 
 import Logo from "components/Logo";
 import colors from "config/colors";
+import { HeroProps } from "./Checklist/types";
 
 const MainTextWrapper = styled.div`
   color: ${colors.white};
@@ -12,7 +20,11 @@ const MainTextWrapper = styled.div`
   padding-bottom: 2em;
 `;
 
-const Hero: FunctionComponent = () => (
+const Hero: FunctionComponent<HeroProps> = ({
+  itemsCount,
+  checkedItemsCount,
+  clearItems,
+}) => (
   <>
     <CardContent>
       <MainTextWrapper>
@@ -30,6 +42,22 @@ const Hero: FunctionComponent = () => (
               a&nbsp;stan checklisty pozostanie na twoim urządzeniu, gdy wrócisz
               do niej później.
             </Typography>
+          </Grid>
+          <Grid item xs={12} md={6} alignItems="center">
+            <Typography variant="h2" color="inherit" align="center">
+              {checkedItemsCount}/{itemsCount}
+            </Typography>
+            <Box textAlign="center">
+              <Fade in={!!checkedItemsCount}>
+                <Button
+                  variant="outlined"
+                  color="inherit"
+                  onClick={() => clearItems()}
+                >
+                  Wyczyść mie to
+                </Button>
+              </Fade>
+            </Box>
           </Grid>
         </Grid>
       </MainTextWrapper>

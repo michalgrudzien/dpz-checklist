@@ -7,7 +7,11 @@ import ChecklistSection from "./ChecklistSection";
 
 import { ChecklistProps, ChecklistItem } from "./types";
 
-const Checklist: FunctionComponent<ChecklistProps> = ({ data }) => {
+const Checklist: FunctionComponent<ChecklistProps> = ({
+  data,
+  checkedItems,
+  updateItem,
+}) => {
   const { sections, items, tooltips } = data;
 
   const groupedItems = groupBy(items, (item: ChecklistItem) => item.section);
@@ -21,6 +25,8 @@ const Checklist: FunctionComponent<ChecklistProps> = ({ data }) => {
             title={section.label}
             items={groupedItems[section.id]}
             ladies={section.ladies}
+            checkedItems={checkedItems}
+            updateItem={updateItem}
           />
         ))}
       </CardContent>

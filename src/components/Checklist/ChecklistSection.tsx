@@ -19,6 +19,8 @@ const ChecklistSection: FunctionComponent<ChecklistSectionProps> = ({
   title,
   items = [],
   ladies = false,
+  checkedItems,
+  updateItem,
 }) => {
   return (
     <Wrapper ladies={ladies}>
@@ -30,9 +32,9 @@ const ChecklistSection: FunctionComponent<ChecklistSectionProps> = ({
           {items.map((item) => (
             <ChecklistItem
               label={item.label}
-              value={true}
+              value={!!checkedItems[item.label]}
               id={item.label}
-              onChange={() => {}}
+              onChange={updateItem}
               key={item.label}
             />
           ))}

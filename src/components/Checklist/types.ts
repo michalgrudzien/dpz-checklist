@@ -6,7 +6,8 @@ export type ChecklistData = {
 
 export type ChecklistProps = {
   data: ChecklistData;
-  //TODO: extend
+  checkedItems: { [name: string]: string };
+  updateItem: Function;
 };
 
 export type ChecklistItem = {
@@ -15,8 +16,23 @@ export type ChecklistItem = {
   tooltip?: string;
 };
 
+export type ChecklistItemProps = {
+  label: string;
+  value: boolean;
+  id: string;
+  onChange: Function;
+};
+
 export type ChecklistSectionProps = {
   title: string;
   items: ChecklistItem[];
   ladies: boolean | undefined;
+  checkedItems: { [name: string]: string };
+  updateItem: Function;
+};
+
+export type HeroProps = {
+  itemsCount: number;
+  checkedItemsCount: number;
+  clearItems: Function;
 };
