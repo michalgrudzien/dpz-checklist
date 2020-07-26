@@ -1,0 +1,92 @@
+{
+  "INLAND": {
+    "sections": [
+      {
+        "label": "Ubrania",
+        "id": "clothing"
+      },
+      {
+        "label": "Obuwie",
+        "id": "shoes"
+      },
+      {
+        "label": "Pozostałe",
+        "id": "other"
+      },
+      {
+        "label": "Część damska - ubrania",
+        "id": "ladies_clothing",
+        "ladies": true
+      },
+      {
+        "label": "Część damska - pozostałe",
+        "id": "ladies_other",
+        "ladies": true
+      }
+    ],
+    "items": [
+      {
+        "label": "spodnie typu \"nie dres\"",
+        "section": "clothing"
+      },
+      {
+        "label": "dres długi",
+        "section": "clothing"
+      },
+      {
+        "label": "dres krótki",
+        "section": "clothing"
+      },
+      {
+        "label": "koszula hawajska",
+        "section": "clothing"
+      },
+      {
+        "label": "sweter albo bluza (typ: lekki)",
+        "section": "clothing"
+      },
+      {
+        "label": "sweter albo bluza (typ: gruby)",
+        "section": "clothing"
+      },
+      {
+        "label": "czapka albo kapelusz na słońce",
+        "section": "clothing"
+      },
+      {
+        "label": "tiszerty (o jeden więcej niż ci się wydaje, że trzeba)",
+        "section": "clothing"
+      },
+      {
+        "label": "sztormiak albo cokolwiek w czym bez płaczu wytrzymasz mazurską mżawkę",
+        "section": "clothing"
+      },
+      {
+        "label": "arafatka/chusta/szaliczek",
+        "section": "clothing"
+      },
+      {
+        "label": "kąpielówki/strój kąpielowy",
+        "section": "clothing"
+      },
+      {
+        "label": "bielizna",
+        "section": "clothing"
+      },
+      {
+        "label": "rękawiczki szotowe",
+        "section": "clothing",
+        "tooltip": "NOT_REQUIRED"
+      },
+      {
+        "label": "czapka nieco cieplejsza",
+        "section": "clothing"
+      }
+    ],
+    "tooltips": {
+      "NOT_REQUIRED": "Nie uważamy, że to konieczne, ale na pewno może się przydać.",
+      "MEDICINE": "Standardowe leki takie jak środki przeciwbólowe, przeciwzapalne, na biegunkę zapewniamy w apteczce jachtowej.",
+      "ONE_IS_ENOUGH": "Warto się dogadać z koleżankami z załogi żeby nie brać pięciu."
+    }
+  }
+}
