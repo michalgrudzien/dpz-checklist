@@ -8,6 +8,7 @@ import {
   Fade,
   Button,
   Box,
+  Link,
 } from "@material-ui/core";
 
 import Logo from "components/Logo";
@@ -19,6 +20,8 @@ const MainTextWrapper = styled.div`
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
   padding-bottom: 2em;
 `;
+
+//TODO: link to sea checklist based on trip
 
 const Hero: FunctionComponent<HeroProps> = ({
   itemsCount,
@@ -40,7 +43,14 @@ const Hero: FunctionComponent<HeroProps> = ({
             <Typography color="inherit" variant="body1">
               Możesz (z nieukrywaną satysfakcją!) odhaczać kolejne pozycje,
               a&nbsp;stan checklisty pozostanie na twoim urządzeniu, gdy wrócisz
-              do niej później.
+              do niej później. Checklista w PDFie jest do pobrania{" "}
+              <Link
+                href="https://static.depezet.com/documents/checklista_dpz_rejs_srodladowy.pdf"
+                target="_blank"
+              >
+                tutaj
+              </Link>
+              .
             </Typography>
           </Grid>
           <Grid item xs={12} md={6} alignItems="center">
