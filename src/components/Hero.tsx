@@ -10,10 +10,11 @@ import {
   Box,
   Link,
 } from "@material-ui/core";
+import ClearIcon from "@material-ui/icons/Clear";
 
 import Logo from "components/Logo";
 import colors from "config/colors";
-import { HeroProps } from "./Checklist/types";
+import { HeroProps } from "./types";
 
 const MainTextWrapper = styled.div`
   color: ${colors.white};
@@ -63,6 +64,7 @@ const Hero: FunctionComponent<HeroProps> = ({
                   variant="outlined"
                   color="inherit"
                   onClick={() => clearItems()}
+                  startIcon={<ClearIcon />}
                 >
                   Wyczyść mie to
                 </Button>

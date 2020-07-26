@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import { ThemeProvider } from "@material-ui/styles";
@@ -12,12 +12,8 @@ import Hero from "components/Hero";
 import Checklist from "components/Checklist";
 
 import checklistData from "items.json";
-import {
-  checkListActive,
-  initStorage,
-  getStorageState,
-  useChecklist,
-} from "components/localStorage";
+import { useChecklist } from "components/localStorage";
+import Progress from "components/Progress";
 
 const Wrapper = styled.div`
   padding-bottom: 2em;
@@ -37,6 +33,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Progress itemsCount={itemsCount} checkedItemsCount={checkedItemsCount} />
       <Wrapper>
         <GradientBackground />
         <Container>
