@@ -30,9 +30,3 @@ export type ChecklistSectionProps = {
   checkedItems: { [name: string]: string };
   updateItem: Function;
 };
-
-export type HeroProps = {
-  itemsCount: number;
-  checkedItemsCount: number;
-  clearItems: Function;
-};

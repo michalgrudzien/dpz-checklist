@@ -81,6 +81,161 @@
       {
         "label": "czapka nieco cieplejsza",
         "section": "clothing"
+      },
+      {
+        "label": "klapki albo sandałki (najlepiej, żeby nadawały się też pod prysznic)",
+        "section": "shoes"
+      },
+      {
+        "label": "buty na jacht (niemarkująca podeszwa, najlepiej szybkoschnące)",
+        "section": "shoes"
+      },
+      {
+        "label": "kalosze",
+        "section": "shoes",
+        "tooltip": "NOT_REQUIRED"
+      },
+      {
+        "label": "buty na miasto",
+        "section": "shoes"
+      },
+      {
+        "label": "ręcznik szybkoschnący rozmiar duży",
+        "section": "other"
+      },
+      {
+        "label": "ręcznik zwykły rozmiar mały",
+        "section": "other",
+        "tooltip": "NOT_REQUIRED"
+      },
+      {
+        "label": "aparat",
+        "section": "other"
+      },
+      {
+        "label": "twój instrument",
+        "section": "other"
+      },
+      {
+        "label": "śpiwór",
+        "section": "other"
+      },
+      {
+        "label": "kosmetyczka (z zawartością)",
+        "section": "other"
+      },
+      {
+        "label": "czołówka",
+        "section": "other"
+      },
+      {
+        "label": "leki twoje niezbędne",
+        "section": "other",
+        "tooltip": "MEDICINE"
+      },
+      {
+        "label": "kubek termiczny* (albo ulubiony acz nietłukący, czasem się przydaje)",
+        "section": "other",
+        "tooltip": "NOT_REQUIRED"
+      },
+      {
+        "label": "opaska na okulary (taka, która sprawia, że nie spadają)",
+        "section": "other"
+      },
+      {
+        "label": "okulary przeciwsłoneczne",
+        "section": "other"
+      },
+      {
+        "label": "powerbank",
+        "section": "other"
+      },
+      {
+        "label": "ładowarki, których potrzebujesz",
+        "section": "other"
+      },
+      {
+        "label": "krem z filtrem 50 (będzie i słońce i wiatr)",
+        "section": "other"
+      },
+      {
+        "label": "krem do opalania (lżejszy)",
+        "section": "other"
+      },
+      {
+        "label": "podusia",
+        "section": "other",
+        "tooltip": "NOT_REQUIRED"
+      },
+      {
+        "label": "dowód osobisty",
+        "section": "other"
+      },
+      {
+        "label": "mokre chusteczki",
+        "section": "other"
+      },
+      {
+        "label": "książka",
+        "section": "other",
+        "tooltip": "NOT_REQUIRED"
+      },
+      {
+        "label": "leginsy/wygodne spodnie",
+        "section": "ladies_clothing"
+      },
+      {
+        "label": "szorty",
+        "section": "ladies_clothing"
+      },
+      {
+        "label": "staniki sportowe",
+        "section": "ladies_clothing"
+      },
+      {
+        "label": "sukienka bądź bluzka z cekinami do wystrojenia się na miasto (np. Ruciane Nida)",
+        "section": "ladies_clothing"
+      },
+      {
+        "label": "coś do demakijażu",
+        "section": "ladies_other"
+      },
+      {
+        "label": "coś do depilacji",
+        "section": "ladies_other"
+      },
+      {
+        "label": "pęseta",
+        "section": "ladies_other"
+      },
+      {
+        "label": "pilniczek",
+        "section": "ladies_other"
+      },
+      {
+        "label": "tampony/podpaski",
+        "section": "ladies_other"
+      },
+      {
+        "label": "gumka/opaska do włosów (będzie wiało)",
+        "section": "ladies_other"
+      },
+      {
+        "label": "suszarka",
+        "section": "ladies_other",
+        "tooltip": "ONE_IS_ENOUGH"
+      },
+      {
+        "label": "suchy szampon",
+        "section": "ladies_other"
+      },
+      {
+        "label": "szczotka do włosów",
+        "section": "ladies_other"
+      },
+      {
+        "label": "pomadka do ust",
+        "section": "ladies_other"
       }
     ],
     "tooltips": {
