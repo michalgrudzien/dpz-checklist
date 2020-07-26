@@ -12,7 +12,7 @@ const Checklist: FunctionComponent<ChecklistProps> = ({
   checkedItems,
   updateItem,
 }) => {
-  const { sections, items, tooltips } = data;
+  const { sections, items } = data;
 
   const groupedItems = groupBy(items, (item: ChecklistItem) => item.section);
 
