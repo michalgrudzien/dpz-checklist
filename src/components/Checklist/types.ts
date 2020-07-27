@@ -1,7 +1,9 @@
+export type TooltipKey = "NOT_REQUIRED" | "MEDICINE" | "ONE_IS_ENOUGH";
+
 export type ChecklistData = {
   sections: { label: string; id: string; ladies?: boolean }[];
   items: ChecklistItem[];
-  tooltips: { [name: string]: string };
+  tooltips: { [key in TooltipKey]: string };
 };
 
 export type ChecklistProps = {
@@ -13,7 +15,7 @@ export type ChecklistProps = {
 export type ChecklistItem = {
   label: string;
   section: string;
-  tooltip?: string;
+  tooltip?: any;
 };
 
 export type ChecklistItemProps = {
@@ -21,12 +23,17 @@ export type ChecklistItemProps = {
   value: boolean;
   id: string;
   onChange: Function;
+  tooltip?: TooltipKey;
 };
 
 export type ChecklistSectionProps = {
   title: string;
   items: ChecklistItem[];
-  ladies: boolean | undefined;
+  ladies?: boolean;
   checkedItems: { [name: string]: string };
   updateItem: Function;
+};
+
+export type TooltipProps = {
+  type?: TooltipKey;
 };

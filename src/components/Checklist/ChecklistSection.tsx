@@ -36,6 +36,7 @@ const ChecklistSection: FunctionComponent<ChecklistSectionProps> = ({
               id={item.label}
               onChange={updateItem}
               key={item.label}
+              tooltip={item.tooltip}
             />
           ))}
         </Grid>
