@@ -5,7 +5,7 @@ import wtLogoImg from "assets/images/logo_inland.svg";
 
 const LogoImg = styled.img`
   display: block;
-  width: 200px;
+  width: 250px;
   padding-top: 2em;
 `;
 
