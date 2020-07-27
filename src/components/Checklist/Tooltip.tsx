@@ -13,7 +13,12 @@ const Tooltip: FunctionComponent<TooltipProps> = ({ type }) => {
   if (!type) return null;
 
   return (
-    <MuiTooltip title={tooltips[type]} arrow>
+    <MuiTooltip
+      title={tooltips[type]}
+      arrow
+      enterDelay={0}
+      enterTouchDelay={0}
+    >
       <InfoOutlinedIcon fontSize="small" color="primary" />
     </MuiTooltip>
   );
