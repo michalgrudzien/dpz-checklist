@@ -15,7 +15,7 @@ const ChecklistItem: FunctionComponent<ChecklistItemProps> = ({
   onChange,
   tooltip,
 }) => (
-  <FormControl component="fieldset" fullWidth>
+  <FormControl component="fieldset">
     <FormGroup>
       <FormControlLabel
         control={
