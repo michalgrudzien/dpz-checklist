@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useState } from "react";
 import styled from "styled-components";
 
 import {
@@ -15,6 +15,7 @@ import ClearIcon from "@material-ui/icons/Clear";
 import Logo from "components/Logo";
 import colors from "config/colors";
 import { HeroProps } from "./types";
+import BagInfoModal from "./BagInfoModal";
 
 const MainTextWrapper = styled.div`
   color: ${colors.white};
@@ -28,53 +29,66 @@ const Hero: FunctionComponent<HeroProps> = ({
   itemsCount,
   checkedItemsCount,
   clearItems,
-}) => (
-  <>
-    <CardContent>
-      <MainTextWrapper>
-        <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={12}>
-            <Logo />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Typography color="inherit" variant="body1">
-              Cześć! Udostępniamy naszą checklistę mającą wspomóc jakże żmudny,
-              acz radosny czas pakowania się na rejs!
-            </Typography>
-            <Typography color="inherit" variant="body1">
-              Możesz (z nieukrywaną satysfakcją!) odhaczać kolejne pozycje,
-              a&nbsp;stan checklisty pozostanie na twoim urządzeniu, gdy wrócisz
-              do niej później. Checklista w PDFie jest do pobrania{" "}
-              <Link
-                href="https://static.depezet.com/documents/checklista_dpz_rejs_srodladowy.pdf"
-                target="_blank"
-              >
-                tutaj
-              </Link>
-              .
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Typography variant="h2" color="inherit" align="center">
-              {checkedItemsCount}/{itemsCount}
-            </Typography>
-            <Box textAlign="center">
-              <Fade in={!!checkedItemsCount}>
-                <Button
-                  variant="outlined"
-                  color="inherit"
-                  onClick={() => clearItems()}
-                  startIcon={<ClearIcon />}
+}) => {
+  const [bagModalOpen, setBagModalOpen] = useState(false);
+
+  return (
+    <>
+      <CardContent>
+        <MainTextWrapper>
+          <Grid container spacing={4} alignItems="center">
+            <Grid item xs={12} md={12}>
+              <Logo />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Typography color="inherit" variant="body1">
+                Cześć! Udostępniamy naszą checklistę mającą wspomóc jakże
+                żmudny, acz radosny czas pakowania się na rejs!
+              </Typography>
+              <Typography color="inherit" variant="body1">
+                Możesz (z nieukrywaną satysfakcją!) odhaczać kolejne pozycje,
+                a&nbsp;stan checklisty pozostanie na twoim urządzeniu, gdy
+                wrócisz do niej później. Checklista w PDFie jest do pobrania{" "}
+                <Link
+                  href="https://static.depezet.com/documents/checklista_dpz_rejs_srodladowy.pdf"
+                  target="_blank"
                 >
-                  Wyczyść mie to
-                </Button>
-              </Fade>
-            </Box>
+                  tutaj
+                </Link>
+                .
+              </Typography>
+              <Typography color="inherit" variant="body1">
+                Aha, jeszcze jedno - jeśli to twój pierwszy rejs, <br />
+                sprawdź{" "}
+                <Link href="#" onClick={() => setBagModalOpen(true)}>
+                  do czego się spakować
+                </Link>
+                .
+              </Typography>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Typography variant="h2" color="inherit" align="center">
+                {checkedItemsCount}/{itemsCount}
+              </Typography>
+              <Box textAlign="center">
+                <Fade in={!!checkedItemsCount}>
+                  <Button
+                    variant="outlined"
+                    color="inherit"
+                    onClick={() => clearItems()}
+                    startIcon={<ClearIcon />}
+                  >
+                    Wyczyść mie to
+                  </Button>
+                </Fade>
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
-      </MainTextWrapper>
-    </CardContent>
-  </>
-);
+        </MainTextWrapper>
+      </CardContent>
+      <BagInfoModal open={bagModalOpen} setOpen={setBagModalOpen} />
+    </>
+  );
+};
 
 export default Hero;
