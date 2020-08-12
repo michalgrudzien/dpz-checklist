@@ -10,16 +10,13 @@ import {
   DialogActions,
 } from "@material-ui/core";
 
+import { BagInfoModalProps } from "./types";
+
 import bagsImg from "assets/images/bags.jpg";
 
 const StyledImg = styled.img`
   max-width: 100%;
 `;
-
-type BagInfoModalProps = {
-  open: boolean;
-  setOpen: Function;
-};
 
 const BagInfoModal: FunctionComponent<BagInfoModalProps> = ({
   open,

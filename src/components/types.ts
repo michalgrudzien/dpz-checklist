@@ -8,3 +8,8 @@ export type HeroProps = {
   checkedItemsCount: number;
   clearItems: Function;
 };
+
+export type BagInfoModalProps = {
+  open: boolean;
+  setOpen: Function;
+};
