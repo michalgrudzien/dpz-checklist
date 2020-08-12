@@ -58,10 +58,9 @@ const Hero: FunctionComponent<HeroProps> = ({
                 .
               </Typography>
               <Typography color="inherit" variant="body1">
-                Aha, jeszcze jedno - jeśli to twój pierwszy rejs, <br />
-                sprawdź{" "}
+                Aha, jeszcze jedno - jeśli to twój pierwszy rejs, sprawdź{" "}
                 <Link href="#" onClick={() => setBagModalOpen(true)}>
-                  do czego się spakować
+                  do&nbsp;czego&nbsp;się&nbsp;spakować
                 </Link>
                 .
               </Typography>
