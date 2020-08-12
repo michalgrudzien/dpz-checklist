@@ -10,12 +10,20 @@ export type ChecklistProps = {
   data: ChecklistData;
   checkedItems: { [name: string]: string };
   updateItem: Function;
+  withLadies: boolean;
+  setWithLadies: Function;
 };
 
 export type ChecklistItem = {
   label: string;
   section: string;
   tooltip?: any;
+};
+
+export type ChecklistSection = {
+  label: string;
+  id: string;
+  ladies?: boolean;
 };
 
 export type ChecklistItemProps = {
@@ -36,4 +44,9 @@ export type ChecklistSectionProps = {
 
 export type TooltipProps = {
   type?: TooltipKey;
+};
+
+export type ChecklistSettingsProps = {
+  withLadies: boolean;
+  setWithLadies: Function;
 };

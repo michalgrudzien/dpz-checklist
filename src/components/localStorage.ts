@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 
 const STORAGE_KEY = "dpz-checklist";
 
-export const initStorage = (tripId: string) =>
-  setStorageState({ tripId, items: {} });
+export const initStorage = (tripId: string, withLadies: boolean = false) =>
+  setStorageState({ tripId, withLadies, items: {} });
 
 export const checkListActive = (tripId: string) => {
   const currentState = getStorageState();
@@ -23,25 +23,16 @@ export const getStorageState = () => {
 export const setStorageState = (state: object) =>
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 
-export const updateItem = (item: string, value: string) => {
-  const currentState = getStorageState();
-
-  setStorageState({
-    ...currentState,
-    items: {
-      ...currentState.items,
-      [item]: value,
-    },
-  });
-};
-
-export const useChecklist = (tripId: string) => {
+export const useChecklist = (tripId: string, withLadies?: boolean) => {
   const initialState = () => {
-    if (!checkListActive(tripId)) initStorage(tripId);
+    if (!checkListActive(tripId)) initStorage(tripId, withLadies);
     return getStorageState();
   };
 
   const [state, setState] = useState(initialState);
+
+  const setWithLadies = (value: boolean) =>
+    setState({ ...state, withLadies: value });
 
   const updateItem = (item: string, value: string) =>
     setState({
@@ -60,5 +51,11 @@ export const useChecklist = (tripId: string) => {
 
   useEffect(() => setStorageState(state), [state]);
 
-  return { items: state.items, updateItem, clearItems };
+  return {
+    items: state.items,
+    withLadies: state.withLadies,
+    updateItem,
+    clearItems,
+    setWithLadies,
+  };
 };
