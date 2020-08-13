@@ -6,17 +6,17 @@
         "id": "clothing"
       },
       {
+        "label": "Część damska - ubrania",
+        "id": "ladies_clothing",
+        "ladies": true
+      },
+      {
         "label": "Obuwie",
         "id": "shoes"
       },
       {
         "label": "Pozostałe",
         "id": "other"
-      },
-      {
-        "label": "Część damska - ubrania",
-        "id": "ladies_clothing",
-        "ladies": true
       },
       {
         "label": "Część damska - pozostałe",
